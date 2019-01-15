@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TobaccoTest {
+public class TobaccoTest{
 
     Tobacco tobaccoStall;
     @Before
@@ -47,5 +47,16 @@ public class TobaccoTest {
     @Test
     public void getParkLocation() {
         assertEquals(2, tobaccoStall.getParkLocation());
+    }
+
+    @Test
+    public void isAllowedTo() {
+        Visitor visitor = new Visitor(17, 190, 50.00);
+        assertTrue(tobaccoStall.isAllowedTo(visitor));
+    }
+    @Test
+    public void isNotAllowedTo(){
+        Visitor visitor = new Visitor(13, 190, 50.00);
+        assertFalse(tobaccoStall.isAllowedTo(visitor));
     }
 }

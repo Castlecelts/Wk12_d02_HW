@@ -1,4 +1,3 @@
-import Attractions.RollerCoaster;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,5 +26,17 @@ public class RollerCoasterTest {
     public void setName() {
         rollerCoaster.setName("Super Loop");
         assertEquals("Super Loop", rollerCoaster.getName());
+    }
+
+    @Test
+    public void isAllowedToTrue() {
+        Visitor visitor = new Visitor(19, 160, 20.00);
+        assertTrue(rollerCoaster.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void isAllowedToFalse() {
+        Visitor visitor = new Visitor(19, 120, 20.00);
+        assertFalse(rollerCoaster.isAllowedTo(visitor));
     }
 }
