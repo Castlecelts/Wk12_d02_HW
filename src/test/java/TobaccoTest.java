@@ -8,7 +8,7 @@ public class TobaccoTest{
     Tobacco tobaccoStall;
     @Before
     public void setUp() {
-        tobaccoStall = new Tobacco("Fresh Air", "Tom Riddle", 2, 20);
+        tobaccoStall = new Tobacco("Fresh Air", "Tom Riddle", 2, 20, 6);
     }
 
     @Test
@@ -58,5 +58,15 @@ public class TobaccoTest{
     public void isNotAllowedTo(){
         Visitor visitor = new Visitor(13, 190, 50.00);
         assertFalse(tobaccoStall.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void getRating() {
+        assertEquals(6, tobaccoStall.getRating());
+    }
+
+    @Test
+    public void getName() {
+        assertEquals("Tom Riddle", tobaccoStall.getName());
     }
 }

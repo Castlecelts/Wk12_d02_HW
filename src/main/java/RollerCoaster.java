@@ -3,10 +3,10 @@ public class RollerCoaster extends Attraction implements ISecurity {
     private int heightOfRide;
     private int minHeight;
 
-    public RollerCoaster(String name, int heightOfRide) {
-        super(name);
+    public RollerCoaster(String name, int rating, int heightOfRide, int minHeight) {
+        super(name, rating);
         this.heightOfRide = heightOfRide;
-        this.minHeight = 150;
+        this.minHeight = minHeight;
     }
 
     public int getHeightOfRide() {

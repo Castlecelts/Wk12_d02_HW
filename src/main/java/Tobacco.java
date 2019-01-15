@@ -2,8 +2,8 @@ public class Tobacco extends Stall implements ISecurity{
     private int numberShelves;
     private int minAge;
 
-    public Tobacco(String brand, String ownerName, int parkLocation, int numberShelves) {
-        super(brand, ownerName, parkLocation);
+    public Tobacco(String brand, String ownerName, int parkLocation, int numberShelves, int rating) {
+        super(brand, ownerName, parkLocation, rating);
         this.numberShelves = numberShelves;
         this.minAge = 16;
     }

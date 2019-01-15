@@ -9,7 +9,7 @@ public class RollerCoasterTest {
 
     @Before
     public void setUp() {
-        rollerCoaster = new RollerCoaster("Loopy Loop", 200);
+        rollerCoaster = new RollerCoaster("Loopy Loop", 5, 200, 140);
     }
 
     @Test

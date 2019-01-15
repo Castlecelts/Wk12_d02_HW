@@ -8,7 +8,7 @@ public class DodgemsTest {
     Dodgems dodgems;
     @Before
     public void setUp() {
-        dodgems = new Dodgems("Bumpers", 2);
+        dodgems = new Dodgems("Bumpers", 5, 2);
     }
 
     @Test
@@ -25,5 +25,16 @@ public class DodgemsTest {
     public void setName() {
         dodgems.setName("Super Bumpers");
         assertEquals("Super Bumpers", dodgems.getName());
+    }
+
+    @Test
+    public void getRating() {
+        assertEquals(5, dodgems.getRating());
+    }
+
+    @Test
+    public void setRating() {
+        dodgems.setRating(2);
+        assertEquals(2, dodgems.getRating());
     }
 }

@@ -1,12 +1,14 @@
-public abstract class Stall {
+public abstract class Stall implements IReviewed{
     private String brand;
     private String ownerName;
     private int parkLocation;
+    private int rating;
 
-    public Stall(String brand, String ownerName, int parkLocation) {
+    public Stall(String brand, String ownerName, int parkLocation, int rating) {
         this.brand = brand;
         this.ownerName = ownerName;
         this.parkLocation = parkLocation;
+        this.rating = rating;
     }
 
     public String getBrand() {
@@ -27,5 +29,13 @@ public abstract class Stall {
 
     public int getParkLocation() {
         return parkLocation;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public String getName() {
+        return ownerName;
     }
 }
